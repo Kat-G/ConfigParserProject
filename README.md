@@ -36,8 +36,22 @@ cmake --build .
 ## Запуск
 
 ```
-./parser config.json reports/*.txt
+./parser config.json files/*.txt
 ```
+
+## Сборка и запуск через Docker
+
+1. Сбор образ:
+
+   ```
+   docker build -t parser .
+   ```
+   
+2. Запуск контейнера:
+
+   ```
+   docker run --rm parser ./parser config.json files/*.txt
+   ```
 
 ## Пример конфигурации
 
